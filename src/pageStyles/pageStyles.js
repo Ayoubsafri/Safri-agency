@@ -57,7 +57,39 @@ export const Wrapper = styled.div`
       }
     }
   }
+  .promo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background-color: white;
 
+    h1 {
+      font-family: ${FONT_FAMILIES.TITLE};
+      font-size: 3rem;
+      color: black;
+      text-transform: uppercase;
+      text-align: center;
+
+      @media (max-width: ${MEDIA_QUERIES.MEDIUM}) {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      width: 70%;
+      font-size: 1.3rem;
+      color: ${COLORS.BLACK};
+      text-align: center;
+      line-height: 2rem;
+      margin: auto;
+
+      @media (max-width: ${MEDIA_QUERIES.MEDIUM}) {
+        width: 90%;
+        font-size: 1rem;
+      }
+    }
+  }
   .description {
     display: flex;
     flex-direction: column;
@@ -244,7 +276,7 @@ export const BottomEdgeUp = styled.div`
     content: "";
     display: block;
     border-bottom: ${({ color }) => `100px solid ${color}`};
-    border-left: 95vw solid transparent;
+    border-left: 96vw solid transparent;
 
     transform: translateY(140px) scale(1.05);
   }

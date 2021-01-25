@@ -3,8 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Wrapper, Image, BottomEdgeDown, BottomEdgeUp, Artist,} from "../pageStyles/pageStyles"
-import { COLORS } from "../constants"
+import { Wrapper, Image, Artist,} from "../pageStyles/pageStyles"
 const IndexPage = () => {
   const{
     wpcontent: {
@@ -12,7 +11,6 @@ const IndexPage = () => {
         HomeMeta: {
           bannerFoto,
           featuredProducts,
-          fieldGroupName,
           kleineBeschrijving,
           title,
         },
@@ -78,12 +76,17 @@ query {
         <div className="inner-div">
           <p className="header-title">{title}</p>
         </div>
+        
        </div>
+       <div className="promo">
+         <h1>EXTRA 15% OFF SALE</h1>
+        <p>Just use code NIKE2021</p>
+  </div>
       <div className="description">
         <p>{kleineBeschrijving}</p>
   </div>
       <div className="artists">
-        <h2>Featured product</h2>
+        <h2>Featured Shoes</h2>
         <div className="artist-items">
           {featuredProducts.map(({ NikeMeta, slug }) => (
             <Artist key={slug} to={`/${slug}`}>
